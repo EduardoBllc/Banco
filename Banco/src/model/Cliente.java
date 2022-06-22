@@ -9,19 +9,25 @@ public class Cliente {
 	private static int contador = 101;
 	
 	private int cod;
-	private int cpf;
+	private String cpf;
 	private String nome;
 	private String email;
 	private Date dataNascimento;
 	private Date dataCadastro;
 	
 	
-	
-	public Cliente(String nome, String email, Date dataNascimento) {
+	/***
+	 * @param nome
+	 * @param email
+	 * @param dataNascimento
+	 * @param cpf
+	 */
+	public Cliente(String nome, String email, Date dataNascimento, String cpf) {
 		
 		this.cod = Cliente.contador;
 		this.nome = nome;
 		this.email = email;
+		this.cpf = cpf;
 		this.dataNascimento = dataNascimento;
 		this.dataCadastro = new Date();
 		Cliente.contador ++;
@@ -51,10 +57,10 @@ public class Cliente {
 	public void setDataNascimento(Date dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
-	public int getCpf() {
+	public String getCpf() {
 		return cpf;
 	}
-	public void setCpf(int cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 	
